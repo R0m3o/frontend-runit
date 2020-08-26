@@ -22,13 +22,15 @@ function AdvancedSearchContent() {
 
                 <div className="form-group">
                     <p>Distance</p>
-
+                    
                     <div className="form-check">
-                        <input type="radio" className="form-check-input" id="PriceFromInput"/> Over 10 km
+                        <input type="radio" id="TenUpInput" name="distance"/>
+                        <label htmlFor="TenUpInput">Over 10 km</label>
                     </div>
-
+                    
                     <div className="form-check">
-                        <input type="radio" className="form-check-input" id="PriceToInput"/> Under 10 km
+                        <input type="radio" id="TenDownInput" name="distance"/> 
+                        <label htmlFor="TenDownInput">Under 10 km</label>
                     </div>
                 </div>
                 

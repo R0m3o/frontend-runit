@@ -26,7 +26,7 @@ function TheEvent(props) {
                     <p>{event.titel}</p>
                     <p>{event.dato}</p>
                     <p>{event.beskrivelse}</p>
-                    <p>Region: {"http://localhost:5021/region/" + event.region}</p>
+                    <p>Region: {event.region.regionnavn}</p>
                     <p>Distance: {event.distance * 0.001} km</p>
                     <p>Pris: {event.pris} kr</p>
                 </div>

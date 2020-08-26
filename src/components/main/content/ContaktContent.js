@@ -17,8 +17,6 @@ function ContactContent() {
             });
     }, [])
 
-    
-
    /*  if (members.length > 0) {
         listOfFacultyMembers = members.map(member => {
             return (

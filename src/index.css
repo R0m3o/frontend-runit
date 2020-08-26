@@ -8,7 +8,8 @@ main {
 
 section {
   background-color: #FFFFFF;
-  margin-left: 30px;
+  margin-left: 10px;
+  margin-bottom: 30px;
 }
 
 footer {
@@ -22,3 +23,13 @@ footer {
 #NewsLetter {
   background-color: #000000;
 }
+
+#SponsoreContent .col-3 .card{
+  height: 200px;
+  margin-bottom: 20px;
+} 
+
+#SponsoreContent .col-2 .card{
+  height: 130px;
+  margin-bottom: 20px;
+} 
