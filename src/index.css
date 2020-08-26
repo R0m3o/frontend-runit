@@ -2,16 +2,20 @@ header {
   background-color: #CB4046;
 }
 
+main {
+  background-image: url(./images/foresttothebay.jpg);
+}
+
+section {
+  background-color: #FFFFFF;
+}
+
 footer {
   background-color: #000000;
 }
 
 #NaesteLoeb {
   background-color: #000000;
-}
-
-#Content {
-  background-image: url(./images/foresttothebay.jpg);
 }
 
 #NewsLetter {
