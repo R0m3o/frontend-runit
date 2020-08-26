@@ -13,7 +13,7 @@ function Content() {
     return(
         
         <div className="col-9" id="Content">
-            <img src={Logo} alt="logo"/>
+            <img src={Logo} alt="logo" className="logo img-fluid"/>
 
             <div className="row">
                 <Route exact path='/' component={HomeContent}/>

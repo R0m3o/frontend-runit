@@ -5,7 +5,7 @@ import SponsorAdd from './right-column/SponsorAdd';
 
 function RightColumn() {
     return(
-        <div className="col-3">
+        <div className="col-3" id="RightColumn">
             <NextEventAdd/>
             <NewsLetter/>
             <SponsorAdd/>

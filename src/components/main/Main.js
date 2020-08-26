@@ -4,7 +4,7 @@ import RightColumn from './RightColumn';
 
 function Main() {
     return(
-        <main className="row">
+        <main className="row container-fluid">
             <Content/>
             <RightColumn/>
         </main>

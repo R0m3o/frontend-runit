@@ -31,79 +31,121 @@ function EventsContent() {
         listOfEvents = events.map(event => {
             if (region === "AllRegions" && distance === "AllDistances") {
                 return (
-                    <article key={event.id} className="col-4">
-                        <img className="img-fluid" src={"http://localhost:5021/images/events/" + event.billede} alt={event.titel}/>
-                        <p>{event.titel}</p>
-                        <p>{event.dato}</p>
-                        <p>{event.beskrivelse}</p>
-                        <p>Pris: {event.pris}kr</p>
-                        <Link to={'/events/' + event._id}>LÆS MERE</Link>
-                    </article>
+                    <div className="col-4">
+                        <article key={event.id} className="card">
+                            <img className="img-fluid card-img-top" src={"http://localhost:5021/images/events/" + event.billede} alt={event.titel}/>
+                            
+                            <div className="card-body">
+                                <p className="card-title">{event.titel}</p>
+                                <p className="event-dato">{event.dato}</p>
+                                <p className="card-text">{event.beskrivelse}</p>
+                                <p>Pris: {event.pris}kr</p>
+                                <div className="nav-item"> 
+                                    <Link to={'/events/' + event._id} className="nav-link">LÆS MERE</Link>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 )
             }
 
             else if (region ==="AllRegions" && distance === "OverTen" && event.distance >= 10000) {
                 return (
-                    <article key={event.id} className="col-4">
-                        <img className="img-fluid" src={"http://localhost:5021/images/events/" + event.billede} alt={event.titel}/>
-                        <p>{event.titel}</p>
-                        <p>{event.dato}</p>
-                        <p>{event.beskrivelse}</p>
-                        <p>Pris: {event.pris}kr</p>
-                        <Link to={'/events/' + event._id}>LÆS MERE</Link>
-                    </article>
+                    <div className="col-4">
+                        <article key={event.id} className="card">
+                            <img className="img-fluid card-img-top" src={"http://localhost:5021/images/events/" + event.billede} alt={event.titel}/>
+                            
+                            <div className="card-body">
+                                <p className="card-title">{event.titel}</p>
+                                <p className="event-dato">{event.dato}</p>
+                                <p className="card-text">{event.beskrivelse}</p>
+                                <p>Pris: {event.pris}kr</p>
+                                <div className="nav-item"> 
+                                    <Link to={'/events/' + event._id} className="nav-link">LÆS MERE</Link>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 )
             }
 
             else if (region ==="AllRegions" && distance === "UnderTen" && event.distance < 10000) {
                 return (
-                    <article key={event.id} className="col-4">
-                        <img className="img-fluid" src={"http://localhost:5021/images/events/" + event.billede} alt={event.titel}/>
-                        <p>{event.titel}</p>
-                        <p>{event.dato}</p>
-                        <p>{event.beskrivelse}</p>
-                        <p>Pris: {event.pris}kr</p>
-                        <Link to={'/events/' + event._id}>LÆS MERE</Link>
-                    </article>
+                    <div className="col-4">
+                        <article key={event.id} className="card">
+                            <img className="img-fluid card-img-top" src={"http://localhost:5021/images/events/" + event.billede} alt={event.titel}/>
+                            
+                            <div className="card-body">
+                                <p className="card-title">{event.titel}</p>
+                                <p className="event-dato">{event.dato}</p>
+                                <p className="card-text">{event.beskrivelse}</p>
+                                <p>Pris: {event.pris}kr</p>
+                                <div className="nav-item"> 
+                                    <Link to={'/events/' + event._id} className="nav-link">LÆS MERE</Link>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 )
             }
 
             else if (event.region.regionnavn === region && distance === "AllDistances") {
                 return (
-                    <article key={event.id} className="col-4">
-                        <img className="img-fluid" src={"http://localhost:5021/images/events/" + event.billede} alt={event.titel}/>
-                        <p>{event.titel}</p>
-                        <p>{event.dato}</p>
-                        <p>{event.beskrivelse}</p>
-                        <p>Pris: {event.pris}kr</p>
-                        <Link to={'/events/' + event._id}>LÆS MERE</Link>
-                    </article>
+                    <div className="col-4">
+                        <article key={event.id} className="card">
+                            <img className="img-fluid card-img-top" src={"http://localhost:5021/images/events/" + event.billede} alt={event.titel}/>
+                            
+                            <div className="card-body">
+                                <p className="card-title">{event.titel}</p>
+                                <p className="event-dato">{event.dato}</p>
+                                <p className="card-text">{event.beskrivelse}</p>
+                                <p>Pris: {event.pris}kr</p>
+                                <div className="nav-item"> 
+                                    <Link to={'/events/' + event._id} className="nav-link">LÆS MERE</Link>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 )
             }
 
             else if (event.region.regionnavn === region && distance === "OverTen" && event.distance >= 10000) {
                 return (
-                    <article key={event.id} className="col-4">
-                        <img className="img-fluid" src={"http://localhost:5021/images/events/" + event.billede} alt={event.titel}/>
-                        <p>{event.titel}</p>
-                        <p>{event.dato}</p>
-                        <p>{event.beskrivelse}</p>
-                        <p>Pris: {event.pris}kr</p>
-                        <Link to={'/events/' + event._id}>LÆS MERE</Link>
-                    </article>
+                    <div className="col-4">
+                        <article key={event.id} className="card">
+                            <img className="img-fluid card-img-top" src={"http://localhost:5021/images/events/" + event.billede} alt={event.titel}/>
+                            
+                            <div className="card-body">
+                                <p className="card-title">{event.titel}</p>
+                                <p className="event-dato">{event.dato}</p>
+                                <p className="card-text">{event.beskrivelse}</p>
+                                <p>Pris: {event.pris}kr</p>
+                                <div className="nav-item"> 
+                                    <Link to={'/events/' + event._id} className="nav-link">LÆS MERE</Link>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 )
             }
 
             else if (event.region.regionnavn === region && distance === "UnderTen" && event.distance < 10000) {
                 return (
-                    <article key={event.id} className="col-4">
-                        <img className="img-fluid" src={"http://localhost:5021/images/events/" + event.billede} alt={event.titel}/>
-                        <p>{event.titel}</p>
-                        <p>{event.dato}</p>
-                        <p>{event.beskrivelse}</p>
-                        <p>Pris: {event.pris}kr</p>
-                        <Link to={'/events/' + event._id}>LÆS MERE</Link>
-                    </article>
+                    <div className="col-4">
+                        <article key={event.id} className="card">
+                            <img className="img-fluid card-img-top" src={"http://localhost:5021/images/events/" + event.billede} alt={event.titel}/>
+                            
+                            <div className="card-body">
+                                <p className="card-title">{event.titel}</p>
+                                <p className="event-dato">{event.dato}</p>
+                                <p className="card-text">{event.beskrivelse}</p>
+                                <p>Pris: {event.pris}kr</p>
+                                <div className="nav-item"> 
+                                    <Link to={'/events/' + event._id} className="nav-link">LÆS MERE</Link>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 )
             }
         })

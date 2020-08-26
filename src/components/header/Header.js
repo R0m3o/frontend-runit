@@ -5,7 +5,7 @@ import NextEvent from './NextEvent';
 
 function Header() {
     return(
-        <header className="row">
+        <header className="row container-fluid">
             <Menu/>
             <Search/>
             <NextEvent/>
