@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import Logo from '../../images/logo/logo.jpg';
 import HomeContent from './content/HomeContent';
+import AdvancedSearchContent from './content/AdvancedSearchContent';
 import EventsContent from './content/EventsContent';
 import TheEvent from './content/individualContent/TheEvent';
 import SponsoreContent from './content/SponsoreContent';
@@ -16,6 +17,7 @@ function Content() {
 
             <div className="row">
                 <Route exact path='/' component={HomeContent}/>
+                <Route exact path='/advancedsearch' component={AdvancedSearchContent}/>
                 <Route exact path='/events' component={EventsContent}/>
                 <Route exact path='/events/:id' component={TheEvent}/> 
                 <Route exact path='/sponsores' component={SponsoreContent}/>

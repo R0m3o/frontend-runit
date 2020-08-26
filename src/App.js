@@ -8,9 +8,11 @@ import Footer from './components/footer/Footer';
 function App() {
   return (
     <BrowserRouter>
-      <Header/>
-      <Main/>
-      <Footer/>
+      <div className="container-fluid">
+        <Header/>
+        <Main/>
+        <Footer/>
+      </div>
     </BrowserRouter>
   );
 }
