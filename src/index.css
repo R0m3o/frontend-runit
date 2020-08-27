@@ -12,31 +12,52 @@ section {
   margin-left: 10px;
   margin-bottom: 30px;
   border-radius: 3px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-footer {
+footer, #NaesteLoeb, #NewsLetter {
   background-color: #000000;
 }
 
-#NaesteLoeb {
-  background-color: #000000;
+#NewsLetter, .carousel-item {
+  padding: 20px 90px;
 }
 
-#NewsLetter {
-  background-color: #000000;
+#NewsLetter img {
+  margin-bottom: 10px;
 }
 
-#SponsoreContent .col-3 .card{
+#NewsLetter input[type=email], #NewsLetter button {
+  border: 1px solid #FFFFFF;
+  border-radius: 0px;
+  color: #FFFFFF;
+  background-color: inherit;
+}
+
+#SponsorAdd {
+  height: 300px;
+  text-align: center;
+}
+
+#SponsorAdd p {
+  margin-bottom: 2px;
+  font-size: 25px;
+}
+
+#SponsoreContent .col-3 .card {
   height: 200px;
   margin-bottom: 20px;
 } 
 
-#SponsoreContent .col-2 .card{
+#SponsoreContent .col-2 .card {
   height: 125px;
   margin-bottom: 20px;
 }
 
-#SponsoreContent p{
+#SponsoreContent p {
   background-color: #CB4046;
   color: #FFFFFF;
   width: 35%;
@@ -44,69 +65,86 @@ footer {
   margin: 25px 0px;
 }
 
-#Content, #RightColumn, .container-fluid, .row{
+#Content, #RightColumn, .container-fluid, .row {
   padding: 0px;
   margin: 0px;
 }
 
-#Content .logo{
+#Content .logo {
   width: 30%;
   margin: 20px 10px;
 }
 
-.navbar{
+.navbar {
   padding: 8px 14px;
 }
 
-.nav-link{
+.nav-link {
   padding: 0px 10px 6px;
   color: #FFFFFF;
   border-right: 1px solid #FFFFFF;
 }
 
-.logo{
+.logo {
   width: 60%;
   margin: 15px 10px;
 }
 
-.col-10{
-  padding-left: 0px;
+.gold-sponsor {
+  background-color: #FFDC73;
 }
 
-.col-4{
+.silver-sponsor {
+  background-color: #CECABD;
+}
+
+.normal-sponsor {
+  background-color: #FFFFFF;
+}
+
+.col-10 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.col-4 {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-.card{
+.card {
   margin-bottom: 15px;
 }
 
-.card-img-top{
+.card-img-top {
   height: 120px;
 }
 
-.card-body{
+.card-body {
   background-color: #EFEFEF;
   padding: 5px;
 }
 
-.card p{
+.card p {
   margin-bottom: 5px;
 }
 
-.card-text{
+.card-text {
   height: 70px;
   overflow: hidden;
   font-size: 12px;
 }
 
-.event-dato{
+.event-title {
+  font-size: 24px;
+}
+
+.event-dato {
   font-size: 10px;
   font-style: italic;
 }
 
-.card a{
+.card a {
   padding: 5px 10px;
   text-align: center;
   background-color: #CB4046;

@@ -1,9 +1,25 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 function ContactContent() {
     const [members, setMembers] = useState({});
     const [position, setPosition] = useState("Formand");
+    const [message, setMessage] = useState({});
+    const history = useHistory();
+
+    const submitNewMessage = e => {
+        e.preventDefault();
+
+        axios.post('http://localhost:5021/kontakt', message)
+            .then(res => {
+                console.log(res.data);
+                history.push('/');
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
 
     function positionChange(e) {
         setPosition(e.target.value);
@@ -66,20 +82,22 @@ function ContactContent() {
     return(
         <section className="col-10">
             <div className="row">
-                <form action="" className="col-5">
+                <form onSubmit={submitNewMessage} className="col-5">
                     <p>Kontakt os</p>
+                    <p>Vi bestræber os for at give svar tilbage inden for 48 timer</p>
                     <div className="form-group">
                         <label htmlFor="YourNameInput">Dit navn</label>
-                        <input type="text" className="form-control" id="YourNameInput"/>
+                        <input onChange={(e) => setMessage({...message, navn: e.target.value })} type="text" className="form-control" id="YourNameInput"/>
 
-                        <label htmlFor="YourEmailInput">Dit navn</label>
-                        <input type="text" className="form-control" id="YourEmailInput"/>
+                        <label htmlFor="YourEmailInput">Din Email</label>
+                        <input onChange={(e) => setMessage({...message, emailadresse: e.target.value })} type="text" className="form-control" id="YourEmailInput"/>
 
                         <label htmlFor="YourSubjectInput">Emne (fx løbs navn eller ligende)</label>
-                        <input type="text" className="form-control" id="YourSubjectInput"/>
+                        <input onChange={(e) => setMessage({...message, emne: e.target.value })} type="text" className="form-control" id="YourSubjectInput"/>
 
                         <label htmlFor="YourMessageInput">Besked</label>
-                        <textarea name="YourMessageInput" id="YourMessageInput" cols="30" rows="10" className="form-control"></textarea>
+                        <textarea onChange={(e) => setMessage({...message, besked: e.target.value })} name="YourMessageInput" id="YourMessageInput" cols="30" rows="10" className="form-control"></textarea>
+                        <button type="submit">Send Besked</button>
                     </div>
                 </form>
 
