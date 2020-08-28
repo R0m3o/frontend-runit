@@ -11,7 +11,7 @@ function Login() {
 
         axios.post('http://localhost:5021/login/login', user)
             .then(res => {
-                console.log(res.data);
+                console.log(res.data);   
                 history.push('/admin')
             })
             .catch((err) => {
