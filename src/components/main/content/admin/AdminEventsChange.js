@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
+
 function ChangeEvent(props) {
     const [event, setEvent] = useState({});
     const history = useHistory();
@@ -25,7 +26,7 @@ function ChangeEvent(props) {
     const editEvent = (e) => {
         e.preventDefault();
 
-        axios.put('http://localhost:5021/event/admin/' + props.match.params.id, event)
+        axios.put('http://localhost:5021/event/admin/' + props.match.params.id, event, {withCredentials: true})
             .then(res => {
                 console.log(res.data);
                 history.push('/admin/events');

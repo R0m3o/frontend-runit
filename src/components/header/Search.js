@@ -4,19 +4,16 @@ import {LoginContext} from '../main/content/admin/loginContext';
 import axios from 'axios';
 
 function Search() {
-    const { loggedIn } = useContext(LoginContext)
+    const { loggedIn, onLogout } = useContext(LoginContext)
     const history = useHistory()
 
-    function LogOut() {
-        const [user, setUser] = useState({});
-    
-        useEffect(() => {
-            axios.get('http://localhost:5021/login/logout', user)
-                .then(res => {
-                    console.log(res.data);
+    const handleLogout = () => {
+        
+        axios.get('http://localhost:5021/login/logout')
+                .then(data => {
+                    onLogout()
                     history.push('/')
-                });
-        }, [])
+            });
     }
 
 
@@ -24,7 +21,7 @@ function Search() {
 
     if (loggedIn) {
         logInLogout= (
-            <button onClick={LogOut}>Log ud</button> 
+            <button onClick={handleLogout}>Log ud</button> 
         )
     } else {
         logInLogout= (

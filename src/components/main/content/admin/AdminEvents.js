@@ -41,8 +41,8 @@ function AdminEvents() {
                                 <p className="card-text">{event.beskrivelse}</p>
                                 <p>Pris: {event.pris}kr</p>
                                 <div className="nav-item"> 
-                                    <Link to={'/admin/delete/events/' + event._id} className="nav-link">SLET EVENT</Link>
-                                    <Link to={'/admin/edit/events/' + event._id} className="nav-link">RET EVENT</Link>
+                                    <Link to={'/admin/delete/events/' + event._id} className="admin-button">SLET EVENT</Link>
+                                    <Link to={'/admin/edit/events/' + event._id} className="admin-button">RET EVENT</Link>
                                 </div>
                             </div>
                         </article>

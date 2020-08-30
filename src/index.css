@@ -150,3 +150,11 @@ footer, #NaesteLoeb, #NewsLetter {
   background-color: #CB4046;
   color: #FFFFFF;
 }
+
+.admin-button {
+  background-color: #CB4046;
+  color: #FFFFFF;
+  padding: 8px 5px;
+  margin-right: 5px;
+  margin-bottom: 8px;
+}
